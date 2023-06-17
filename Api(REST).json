@@ -1,0 +1,10 @@
+ GET /hotels
+
+- Результат:
+{ "hotels": [ { "id": 1, "name": "Hotel A", "city": "City 1", "country": "Country 1", "info": "Description of hotel A"},{ "id": 2, "name": "Hotel B", "city": "City 2", "country": "Country 1", "info": "Description of hotel B"}]
+
+- Получить отель по его ID:
+  Запрос: GET /hotels/:id
+
+- Результат:
+{ "id": 1, "name": "Hotel A", "city": "City 1", "country": "Country 1", "description": "Description of hotel A"}
