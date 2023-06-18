@@ -1,6 +1,7 @@
+// Получение списка отелей
 // GET /hotels
+// Ответ:
 
-// Результат:
 {
     "hotels": [{
         "id": 1,
@@ -18,9 +19,10 @@
 }
 
 // Получить отель по его ID:
-  Запрос: GET /hotels/:id
+// Запрос: GET /hotels/:id
+// GET /hotels/1
+// Ответ:
 
-// Результат:
 {
     "id": 1,
     "name": "Hotel A",
@@ -28,3 +30,114 @@
     "country": "Country 1",
     "info": "Description of hotel A"
 }
+
+// Получение всех номеров в отеле по ID отеля
+//GET /hotels/:id/rooms
+//GET /hotels/1/rooms
+// Ответ:
+
+{
+  "rooms": [
+    {
+      "id": 101,
+      "id_hotel": 1,
+      "price": 100,
+      "number": 43
+    },
+    {
+      "id": 102,
+      "id_hotel": 1,
+      "price": 456,
+      "number": 44
+    }
+  ]
+}
+
+//Получение всех номеров
+// Запрос: GET /rooms 
+// Ответ:
+
+{
+  "rooms": [
+    {
+      "id": 102,
+      "id_hotel": 1,
+      "price": 100,
+      "number": 44
+    },
+    {
+      "id": 103,
+      "id_hotel": 1,
+      "price": 150,
+      "number": 45
+    },
+    {
+      "id": 104,
+      "id_hotel": 2,
+      "price": 80,
+      "number": 46
+    },
+    {
+      "id": 202,
+      "id_hotel": 2,
+      "price": 120,
+      "number": 47
+    }
+  ]
+}
+
+// Получение номера по её ID
+//GET /rooms/:id
+//GET /rooms/101
+// Ответ:
+
+{
+  "id": 101,
+  "id_hotel": 2,
+  "price": 120,
+  "number": 47
+}
+
+// Получение информации о бронировании
+// GET /bookings
+//Ответ:
+
+"bookings": [{
+     "id": 1,
+     "id_hotel": 1,
+     "id_room": 101,
+     "id_user": 1,
+     "id_payment_type": "1",
+     "date_start": "2023-06-18",
+     "date_end": "2023-06-30",
+     "sum": "confirmed",
+     "paid":false
+ }, {
+     "id": 2,
+     "id_hotel": 1,
+     "id_room": 102,
+     "id_user": 2,
+     "id_payment_type": "1",
+     "date_start": "2023-06-06",
+     "date_end": "2023-06-20",
+     "sum": "confirmed",
+     "paid": true
+ }]
+ }
+
+// Получение информации о бронировании id
+GET /bookings/:id
+GET /bookings/2
+//Ответ:
+
+{
+     "id": 2,
+     "id_hotel": 1,
+     "id_room": 102,
+     "id_user": 2,
+     "id_payment_type": "1",
+     "date_start": "2023-06-06",
+     "date_end": "2023-06-20",
+     "sum": "confirmed",
+     "paid": true
+ }
