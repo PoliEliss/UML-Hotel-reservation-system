@@ -102,28 +102,30 @@
 // GET /bookings
 //Ответ:
 
-"bookings": [{
-     "id": 1,
-     "id_hotel": 1,
-     "id_room": 101,
-     "id_user": 1,
-     "id_payment_type": "1",
-     "date_start": "2023-06-18",
-     "date_end": "2023-06-30",
-     "sum": "confirmed",
-     "paid":false
- }, {
-     "id": 2,
-     "id_hotel": 1,
-     "id_room": 102,
-     "id_user": 2,
-     "id_payment_type": "1",
-     "date_start": "2023-06-06",
-     "date_end": "2023-06-20",
-     "sum": "confirmed",
-     "paid": true
- }]
- }
+"bookings":
+{
+    [{
+        "id": 1,
+        "id_hotel": 1,
+        "id_room": 101,
+        "id_user": 1,
+        "id_payment_type": "1",
+        "date_start": "2023-06-18",
+        "date_end": "2023-06-30",
+        "sum": "confirmed",
+        "paid": false
+    }, {
+        "id": 2,
+        "id_hotel": 1,
+        "id_room": 102,
+        "id_user": 2,
+        "id_payment_type": "1",
+        "date_start": "2023-06-06",
+        "date_end": "2023-06-20",
+        "sum": "confirmed",
+        "paid": true
+    }]
+}
 
 // Получение информации о бронировании id
 GET /bookings/:id
